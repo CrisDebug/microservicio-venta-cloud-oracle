@@ -12,7 +12,7 @@
     </parent>
 
     <groupId>com.ejemplo</groupId>
-    <artifactId>microservicios-publicaciones</artifactId>
+    <artifactId>microservicios-venta-crud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>microservicios-publicaciones</name>
     <description>Microservicio de publicaciones</description>
