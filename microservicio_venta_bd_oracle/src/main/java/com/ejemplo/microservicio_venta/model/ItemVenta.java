@@ -5,6 +5,8 @@ import jakarta.validation.constraints.*;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 @Table(name = "ITEM_VENTA")
 public class ItemVenta {
@@ -29,6 +31,7 @@ public class ItemVenta {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "venta_id")
+    @JsonBackReference
     private Venta venta;
 
     // Getters y Setters
