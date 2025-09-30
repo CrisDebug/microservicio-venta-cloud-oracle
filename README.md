@@ -42,3 +42,14 @@ spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 
 server.port=9090
+
+# Compilación con Maven Wrapper
+
+Puedes compilar y ejecutar el proyecto con Maven Wrapper:
+
+```bash
+# Compilar el proyecto
+./mvnw clean install
+
+# Ejecutar la aplicación
+./mvnw spring-boot:run
