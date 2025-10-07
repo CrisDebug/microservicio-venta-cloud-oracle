@@ -32,24 +32,14 @@ La aplicación está configurada para ejecutarse en el puerto **9090** (en lugar
 La conexión a la base de datos Oracle se realiza con las siguientes propiedades definidas en `src/main/resources/application.properties`:
 
 ```properties
-spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
-spring.datasource.username=UsuarioTiendaMascotas
-spring.datasource.password=**************   # (oculto por seguridad)
+spring.datasource.url=jdbc:oracle:thin:@bdy2201_high
+spring.datasource.username=${DB_USER}
+spring.datasource.password=${DB_PASSWORD}
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+
 spring.jpa.database-platform=org.hibernate.dialect.Oracle12cDialect
 spring.jpa.hibernate.ddl-auto=create
-
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 
 server.port=9090
-
-# Compilación con Maven Wrapper
-
-Puedes compilar y ejecutar el proyecto con Maven Wrapper:
-
-```bash
-# Compilar el proyecto
-./mvnw clean install
-
-# Ejecutar la aplicación
-./mvnw spring-boot:run

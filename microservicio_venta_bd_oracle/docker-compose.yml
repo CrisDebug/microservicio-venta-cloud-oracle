@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  microservicio-venta:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: microservicio-venta
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./Wallet_BDY2201:/app/Wallet_BDY2201
+    environment:
+      - DB_USER=USUARIO_TIENDA
+      - DB_PASSWORD=Usuariocloud2025
+      - TNS_ADMIN=/app/Wallet_BDY2201   # <-- variable TNS_ADMIN
+    restart: unless-stopped
